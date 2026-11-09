@@ -1,9 +1,14 @@
 import AppHeader from "./components/AppHeader"
+import AppFooter from "./components/AppFooter"
+import AppMain from "./components/AppMain"
 function App() {
   return (
     <>
       <AppHeader />
-      <div>hello react!!</div>
+      <AppMain />
+
+      <AppFooter />
+
     </>
   )
 }

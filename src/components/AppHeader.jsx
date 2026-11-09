@@ -1,5 +1,5 @@
 function AppHeader() {
-    return <div>sono un header</div>
+    return <header>sono un header</header>
 }
 
 export default AppHeader;
