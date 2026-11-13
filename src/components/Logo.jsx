@@ -1,6 +1,6 @@
-function Logo() {
+function Logo(props) {
+    const sottotesto = props.sottotesto
 
-    const payoff = "Molisana, pasta sana";
     const stile = {
 
         padding: "1rem"
@@ -8,7 +8,8 @@ function Logo() {
     return (
         <figure>
             <img src="/logo.png" alt="Logo" />
-            <p className="prova" style={stile}>{payoff}</p>
+            <p className="prova" style={stile}>{props.payoff}</p>
+            <p>{props.sottotesto}</p>
         </figure>
     )
 }

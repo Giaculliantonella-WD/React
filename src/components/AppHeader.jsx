@@ -1,4 +1,7 @@
 import Logo from "./Logo";
+// import linksObjects from "../data/header.links";
+import linksObjects from "@/data/header.links"
+
 
 
 function AppHeader() {
@@ -9,12 +12,7 @@ function AppHeader() {
     //     "Chi Siamo",
     //     "Contatti",
     // ];
-    const linksObjects = [
-        { id: 1, text: 'Home', url: '#' },
-        { id: 2, text: 'Prodotti', url: '#prodotti' },
-        { id: 3, text: 'Chi Siamo', url: '#about' },
-        { id: 4, text: 'Contatti', url: '#contatti' },
-    ];
+
     // const links = linksLabels.map((elemento, i) => {
     //         return <li key={i}><a href="#">{elemento}</a></li>
     //     });
@@ -26,7 +24,7 @@ function AppHeader() {
 
 
     return <header>
-        <Logo />
+        <Logo payoff="sottotilo" sottotesto="hello" />
         <nav>
             <ul>
 

@@ -1,3 +1,5 @@
+import ProductCard from "@/components/ProductCard";
+
 function AppMain() {
 
     const products = [
@@ -88,19 +90,45 @@ function AppMain() {
     ];
 
 
+    const BestSeller = [
+        {
+            id: 1,
+            src: "https://www.lamolisana.it/wp-content/uploads/2021/04/1-spaghetto-quadrato.jpg",
+            title: "N.4 Spaghetto Quadrato Bucato",
+            type: "lunga",
+            time: 6,
+        },
+        {
+            id: 2,
+            src: "https://www.lamolisana.it/wp-content/uploads/2021/04/5-fettuccine.jpg",
+            title: "N.5 Fettuccine",
+            type: "lunga",
+            time: 13,
+        },
+        {
+            id: 3,
+            src: "https://www.lamolisana.it/wp-content/uploads/2021/04/6-linguine.jpg",
+            title: "N.6 Linguine",
+            type: "lunga",
+            time: 12,
+        },
 
+    ]
 
     return (
         <main>
             <section id="products">
+
+                <h2>Best Seller</h2>
+                <div className="container card-container">
+                    {BestSeller.map(prodotto =>
+                        <ProductCard key={prodotto.id} item={prodotto} />)}
+                </div>
+
                 <h2>Liste Prodotti</h2>
                 <div className="container card-container">
-                    {products.map(prodotto => (
-                        <div key={prodotto.id} className="prod-card">
-                            <img src={prodotto.src} alt={prodotto.title} />
-                            <h3>{prodotto.title}</h3>
-                        </div>
-                    ))}
+                    {products.map(prodotto =>
+                        <ProductCard key={prodotto.id} item={prodotto} />)}
                 </div>
             </section>
         </main>
