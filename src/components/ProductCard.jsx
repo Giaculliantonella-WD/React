@@ -1,4 +1,6 @@
-function ProductCard({ nome, img, time, type, cosafare }) {
+import { useState } from "react";
+
+function ProductCard({ nome, img, time, type }) {
 
     // const { nome, img, time, type } = props;
     // destructoring;
@@ -7,14 +9,22 @@ function ProductCard({ nome, img, time, type, cosafare }) {
     // const type = props.type;
     // const time = props.time;
 
+    const [isOpen, setIsOpen] = useState(true);
+
+    function exandCard() {
+        const nuovoValore = !isOpen;
+        setIsOpen(nuovoValore)
+    }
+
 
     return (
         <div className="prod-card">
-            <img src={img} alt={nome} />
+            <img onClick={exandCard} src={img} alt={nome} />
             <h3>{nome}</h3>
-            {(type && time) ? <p>Pasta {type} - Cottura {time} minuti</p> : "Non ci informazioni disponiili"}
+            {isOpen ? <p>Pasta {type} - Cottura {time} minuti</p> : null}
 
-        </div>
+
+        </div >
     )
 }
 

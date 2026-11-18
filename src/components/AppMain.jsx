@@ -116,7 +116,7 @@ function AppMain() {
         },
 
     ]
-    function funzionePadre
+
 
     return (
         <main>
@@ -125,7 +125,7 @@ function AppMain() {
                 <h2>Best Seller</h2>
                 <div className="container card-container">
 
-                    <ProductCard nome="Linguine" img="https://i.etsystatic.com/60529818/r/il/77384a/8698011677/il_1588xN.8698011677_2pvz.jpg" cosafare={funzionePadre} />
+                    <ProductCard nome="Linguine" img="https://i.etsystatic.com/60529818/r/il/77384a/8698011677/il_1588xN.8698011677_2pvz.jpg" />
                     <ProductCard nome={products[2].title} img={products[2].src} />
 
                 </div>
